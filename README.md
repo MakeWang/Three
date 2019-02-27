@@ -8,6 +8,11 @@ Three 遍历
   * 后序遍历----迭代、栈
  * [java代码](#java代码)
 
+
+-----------
+![baidu](https://github.com/MakeWang/Three/blob/master/image/three.png "二叉树")
+
+
 -----------
  # 二叉树遍历
  * 前序遍历
