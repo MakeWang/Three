@@ -7,6 +7,7 @@ Three 遍历
   * 中序遍历----迭代、栈
   * 后序遍历----迭代、栈
  * [java代码](#java代码)
+ * [反向生成二叉树](#反向生成二叉树)
 
 
 -----------
@@ -189,3 +190,28 @@ Three 遍历
 }
 
  ```
+ 
+ -----------
+ # 反向生成二叉树
+ ```java
+ //"A","B","D","#","#","E","#","G","C","#","F","#","#"
+    private ThreeNode getLeftCreateShu(ArrayList<String> arr){
+        if(arr.size() == 0){
+            return null;
+        }
+        ThreeNode threeNode;
+        String item = arr.get(0);
+        if("#".equals(item)){
+            arr.remove(0);
+            return null;
+        }
+        threeNode = new ThreeNode(0,item);
+        if(mRoot == null){
+            mRoot = threeNode;
+        }
+        arr.remove(0);
+        threeNode.leftNode = getLeftCreateShu(arr);
+        threeNode.rightNode = getLeftCreateShu(arr);
+        return threeNode;
+    }
+  ```
